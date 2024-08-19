@@ -1,0 +1,110 @@
+# PHP and OOP Interview Questions & Answers Content
+php_oop_content = """
+1. What is PHP?
+   - Answer: PHP (Hypertext Preprocessor) is a popular open-source server-side scripting language used to create dynamic web pages. It is embedded in HTML and is widely used for web development to build interactive and data-driven websites.
+
+2. What is the difference between PHP 7 and PHP 8?
+   - Answer: PHP 8 introduced several new features and performance improvements compared to PHP 7, including:
+     - JIT (Just-In-Time) Compiler: Enhances performance by compiling code at runtime.
+     - Union Types: Allows a function to accept multiple types for a parameter.
+     - Named Arguments: Arguments can be passed to a function based on their names.
+     - Match Expression: A more flexible alternative to the switch statement.
+     - Constructor Property Promotion: Simplifies property initialization in constructors.
+     - Attributes: Metadata that can be added to classes and methods.
+     - Improvements in error handling, performance, and more.
+
+3. What are some common array functions in PHP?
+   - Answer: Some common array functions include:
+     - `array_merge()`: Merges one or more arrays.
+     - `array_push()`: Adds one or more elements to the end of an array.
+     - `array_pop()`: Removes the last element of an array.
+     - `array_search()`: Searches for a value in an array and returns its key.
+     - `array_filter()`: Filters elements of an array using a callback function.
+     - `array_map()`: Applies a callback function to each element of an array.
+
+4. What are some common string functions in PHP?
+   - Answer: Some common string functions include:
+     - `strlen()`: Returns the length of a string.
+     - `strpos()`: Finds the position of the first occurrence of a substring in a string.
+     - `str_replace()`: Replaces all occurrences of a search string with a replacement string.
+     - `substr()`: Returns a portion of a string.
+     - `strtolower()`: Converts a string to lowercase.
+     - `strtoupper()`: Converts a string to uppercase.
+
+5. What is OOP in PHP?
+   - Answer: OOP (Object-Oriented Programming) in PHP is a programming paradigm that uses objects and classes. It helps organize code into reusable components and promotes principles like encapsulation, inheritance, and polymorphism.
+
+6. What is a class and an object in PHP?
+   - Answer: A class is a blueprint for creating objects, defining properties and methods that the objects will have. An object is an instance of a class, created using the `new` keyword.
+
+7. What is inheritance in PHP?
+   - Answer: Inheritance is an OOP concept where a class (child class) can inherit properties and methods from another class (parent class). This allows for code reuse and the creation of a class hierarchy.
+
+8. What is polymorphism in PHP?
+   - Answer: Polymorphism is an OOP concept where objects of different classes can be treated as objects of a common superclass. It allows for methods to be defined in the parent class and overridden in child classes, enabling flexibility and dynamic behavior.
+
+9. What is encapsulation in PHP?
+   - Answer: Encapsulation is an OOP concept where the internal state of an object is hidden from the outside world. It is achieved by defining properties as private or protected and providing public getter and setter methods to access or modify them.
+
+10. What is a constructor in PHP?
+    - Answer: A constructor is a special method that is automatically called when an object is instantiated from a class. It is used to initialize properties or perform any setup required by the object.
+
+11. What are interfaces in PHP?
+    - Answer: Interfaces in PHP define a contract that classes must adhere to. They contain method declarations without implementations, and any class that implements an interface must define those methods.
+
+12. What are traits in PHP?
+    - Answer: Traits are a mechanism for code reuse in PHP, allowing methods to be included in multiple classes. They provide a way to share functionality across classes without using inheritance.
+
+13. What is a static method in PHP?
+    - Answer: A static method belongs to the class rather than any specific object. It can be called directly on the class itself using the `::` operator without creating an instance of the class.
+
+14. What is the `__autoload()` function in PHP?
+    - Answer: The `__autoload()` function in PHP is used to automatically load class files when a class is instantiated, avoiding the need to manually include or require the class file. It has been replaced by spl_autoload_register() in later versions of PHP.
+
+15. How does PHP handle exceptions?
+    - Answer: PHP handles exceptions using try-catch blocks. Code that may throw an exception is placed inside the `try` block, and the `catch` block is used to handle the exception. You can also use the `finally` block to execute code regardless of whether an exception was thrown.
+
+16. What is a namespace in PHP?
+    - Answer: Namespaces in PHP are used to encapsulate classes, functions, and constants, preventing naming conflicts. They allow you to organize your code better, especially in larger projects with multiple libraries.
+
+17. What is the difference between `==` and `===` in PHP?
+    - Answer: `==` is the equality operator that checks if two values are equal, performing type conversion if necessary. `===` is the identity operator that checks if two values are equal and of the same type, without performing any type conversion.
+
+18. What is dependency injection in PHP?
+    - Answer: Dependency injection is a design pattern where an object's dependencies are provided to it externally rather than being created internally. This promotes loose coupling and makes the code more testable and maintainable.
+
+19. What are design patterns in PHP?
+    - Answer: Design patterns are general solutions to common software design problems. Some common design patterns in PHP include:
+      - Singleton: Ensures a class has only one instance and provides a global point of access to it.
+      - Factory: Creates objects without specifying the exact class of the object.
+      - Observer: Allows an object to notify other objects of state changes.
+      - Strategy: Defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+
+20. What are PHP magic methods?
+    - Answer: PHP magic methods are special methods that start with double underscores (`__`) and are called automatically in certain situations. Some common magic methods include:
+      - `__construct()`: Called when an object is created.
+      - `__destruct()`: Called when an object is destroyed.
+      - `__call()`: Called when invoking inaccessible or non-existing methods.
+      - `__get()`: Called when accessing inaccessible or non-existing properties.
+      - `__set()`: Called when writing to inaccessible or non-existing properties.
+      - `__toString()`: Called when an object is treated as a string.
+"""
+
+# Create a new PDF for PHP and OOP content
+pdf_php_oop = FPDF()
+pdf_php_oop.set_auto_page_break(auto=True, margin=15)
+pdf_php_oop.add_page()
+
+# Add title to PDF
+pdf_php_oop.set_font("Arial", size=12)
+pdf_php_oop.cell(200, 10, txt="PHP & OOP Interview Questions & Answers", ln=True, align="C")
+
+# Add the content to the PDF
+pdf_php_oop.set_font("Arial", size=10)
+pdf_php_oop.multi_cell(0, 10, php_oop_content)
+
+# Save the PDF
+pdf_php_oop_output_path = "/mnt/data/PHP_OOP_Interview_Questions_Answers.pdf"
+pdf_php_oop.output(pdf_php_oop_output_path)
+
+pdf_php_oop_output_path

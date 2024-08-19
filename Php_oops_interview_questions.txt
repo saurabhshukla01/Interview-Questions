@@ -1,0 +1,69 @@
+1. What is Object-Oriented Programming (OOP)?
+Answer: Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", which are instances of classes. OOP focuses on using objects to design and implement software. The four main principles of OOP are encapsulation, inheritance, polymorphism, and abstraction.
+
+2. What are the four pillars of OOP?
+Answer:
+Encapsulation: The bundling of data (attributes) and methods (functions) that operate on the data into a single unit or class. Encapsulation also involves restricting direct access to some of an object's components, which is a means of preventing unintended interference and misuse.
+Inheritance: A mechanism where a new class inherits properties and behavior (methods) from an existing class. This allows for code reuse and the creation of a class hierarchy.
+Polymorphism: The ability of different classes to be treated as instances of the same class through inheritance. Polymorphism allows methods to do different things based on the object it is acting upon, even though they share the same name.
+Abstraction: The concept of hiding the complex implementation details of a system and exposing only the essential features. Abstraction allows the programmer to focus on interactions at a higher level rather than the underlying complexity.
+
+3. What is a class in OOP?
+Answer: A class is a blueprint for creating objects. It defines a set of attributes (properties) and methods (functions) that the objects created from the class will have. A class encapsulates data for the object and methods to manipulate that data.
+
+4. What is an object in OOP?
+Answer: An object is an instance of a class. It is a real-world entity with state (attributes/properties) and behavior (methods/functions) that interact with the data.
+
+5. What is inheritance in OOP?
+Answer: Inheritance is a feature of OOP that allows a new class (derived or child class) to inherit attributes and methods from an existing class (base or parent class). This promotes code reusability and establishes a relationship between the parent and child classes.
+
+6. What is polymorphism in OOP?
+Answer: Polymorphism is the ability to present the same interface for different data types. In OOP, it typically refers to the ability to call the same method on different objects, where each object responds in a different way. It is often achieved through method overriding and method overloading.
+
+7. What is encapsulation in OOP?
+Answer: Encapsulation is the concept of wrapping data (variables) and code (methods) into a single unit known as a class. It also involves controlling access to the data by using access modifiers like private, protected, and public, thus protecting the integrity of the data.
+
+8. What is abstraction in OOP?
+Answer: Abstraction is the concept of hiding the implementation details of a system and exposing only the necessary parts. It helps reduce complexity by allowing the programmer to work with higher-level concepts without needing to understand the intricate details of how they work.
+
+9. What is a constructor in OOP?
+Answer: A constructor is a special method that is automatically called when an object is instantiated from a class. The primary purpose of a constructor is to initialize the object's attributes.
+
+10. What is method overloading in OOP?
+Answer: Method overloading is the ability to define multiple methods with the same name in a class, but with different parameters (number, type, or order of parameters). It allows a class to perform different functions with the same method name.
+
+11. What is method overriding in OOP?
+Answer: Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its parent class. The method in the child class should have the same name, return type, and parameters as the method in the parent class.
+
+12. What are access modifiers in OOP?
+Answer: Access modifiers are keywords used to set the accessibility of classes, methods, and variables. Common access modifiers include:
+Private: Accessible only within the class.
+Protected: Accessible within the class and by derived classes.
+Public: Accessible from any other code.
+
+13. What is an interface in OOP?
+Answer: An interface is a reference type in OOP that can contain only abstract methods (methods without implementation) and constants. Classes that implement the interface must provide concrete implementations of all its methods.
+
+14. What is a destructor in OOP?
+Answer: A destructor is a special method that is called when an object is destroyed or goes out of scope. It is used to clean up resources that the object may have acquired during its lifetime.
+
+15. What are design patterns in OOP?
+Answer: Design patterns are general reusable solutions to common problems that occur in software design. Examples of OOP design patterns include:
+Singleton: Ensures a class has only one instance and provides a global point of access to it.
+Factory: Provides an interface for creating objects without specifying the exact class.
+Observer: Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+16. What is a static method in OOP?
+Answer: A static method belongs to the class rather than any specific instance of the class. It can be called on the class itself rather than on an object created from the class. Static methods can access only static data and static methods.
+
+17. What is multiple inheritance?
+Answer: Multiple inheritance is a feature where a class can inherit attributes and methods from more than one parent class. It is supported in some languages but not in others (like Java) due to the complexity and potential for ambiguity (e.g., the diamond problem).
+
+18. What is a virtual function in OOP?
+Answer: A virtual function is a function in a base class that can be overridden in a derived class. When a function is declared as virtual, the most-derived version of the function is called, even if it is accessed through a pointer or reference to the base class.
+
+19. What is a pure virtual function?
+Answer: A pure virtual function is a function in a base class that has no implementation in that class and must be overridden by derived classes. A class containing a pure virtual function is considered an abstract class.
+
+20. What is the difference between an abstract class and an interface?
+Answer: An abstract class can have both concrete (implemented) methods and abstract (unimplemented) methods, whereas an interface can only have abstract methods. A class can inherit from one abstract class but can implement multiple interfaces.
